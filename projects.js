@@ -34,6 +34,7 @@ for (projectName in projects) {
     background-repeat: no-repeat;
     background-position: center;
     `
+    button.target = "_blank"
 
     button.href = projectData["link"]
 
