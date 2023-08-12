@@ -19,6 +19,10 @@ const projects = {
         "link": "https://utils.is-a.dev/",
         "img": "utils.png",
     },
+    "noughts and crosses": {
+        "link": "https://blob2763.github.io/os-and-xs/",
+        "img": "os-and-xs.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");
@@ -35,6 +39,7 @@ for (projectName in projects) {
     background-position: center;
     `
     button.target = "_blank"
+    button.title = projectName
 
     button.href = projectData["link"]
 

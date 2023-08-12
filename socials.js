@@ -46,6 +46,7 @@ for (site in socials) {
     `
     button.href = siteData["link"]
     button.target = "_blank"
+    button.title = site
 
     socialsList.appendChild(button);
 }
