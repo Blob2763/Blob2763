@@ -40,8 +40,12 @@ for (site in socials) {
 
     let button = document.createElement("a");
     button.className = "grid-item social"
-    button.style = `background-image: url(socials/${siteData["img"]}); background-size: 100% 100%;`
+    button.style = `
+    background-image: url(socials/${siteData["img"]}); 
+    background-size: 100% 100%;
+    `
     button.href = siteData["link"]
+    button.target = "_blank"
 
     socialsList.appendChild(button);
 }
