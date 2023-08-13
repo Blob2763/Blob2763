@@ -1,0 +1,104 @@
+:root {
+    --colour: #000000;
+}
+
+body {
+    background-color: #ffffff;
+
+    font-family: "Inter var", sans-serif;
+
+    text-align: center;
+}
+
+div {
+    /* border: 2px solid black; */
+
+    width: 370px;
+}
+
+td {
+    padding: 0px;
+}
+
+table {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.colour-display {
+    margin: 0px;
+
+    background-color: white;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    height: 50vh;
+}
+
+.colour-display h2 {
+    margin: 5px;
+}
+
+.colour-display #colour-to-guess {
+    border-radius: 0px 0px 6px 6px;
+}
+
+#colour,
+#guess {
+    font-weight: bold;
+    font-size: 35px;
+
+    text-align: center;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        overflow: hidden;
+        width: 250px;
+        appearance: none;
+        background-color: #dcdcdc;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 15px;
+        -webkit-appearance: none;
+        color: #ffffff;
+        margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        width: 1px;
+        -webkit-appearance: none;
+        height: 15px;
+        cursor: ew-resize;
+        background: #434343;
+        box-shadow: -1000px 0 0 1000px var(--colour);
+    }
+
+}
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+    background-color: var(--colour);
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #dcdcdc;
+}
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+    background-color: var(--colour);
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #dcdcdc;
+}

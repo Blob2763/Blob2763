@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>stopwatch thing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+    <h6>ATTEMPT 2</h6>
+    <div class="card">
+        <div class="card-body">
+            <p id="now"></p>
+        </div>
+    </div>
+    <h6>ATTEMPT 1</h6>
+    <div class="card">
+        <div class="card-body">
+            <p>13317h 32m 2s</p>
+        </div>
+    </div>
+    <hr style="width:75%;height:3px;border-width:0;background-color:#FA3768">
+    <p id="about">This is a LIVE view of my stopwatch that I started in September 2022. I made this to teach myself some basics about JavaScript. Other than that, there's no point of being here. Bye!1!!</p>
+    <hr style="width:75%;height:3px;border-width:0;background-color:#FA3768">
+    <br>
+    <div style="text-align:center;">
+        <a href="https://www.youtube.com/c/Blob2763" target="_blank">YouTube</a>
+        <a href="https://scratch.mit.edu/users/codecodcodecod" target="_blank">Scratch</a>
+    </div>
+
+    <script>
+        function convertMsToTime(milliseconds) {
+            let seconds = Math.floor(milliseconds / 1000);
+            let minutes = Math.floor(seconds / 60);
+            let hours = Math.floor(minutes / 60);
+
+            let ms = milliseconds % 1000
+            ms = Math.floor(ms / 10)
+            seconds = seconds % 60;
+            minutes = minutes % 60;
+
+            return hours + "h " + minutes + "m " + seconds + "." + ms + "s";
+        }
+
+        function refreshTimer() {
+            const timeNow = Date.now()
+            const timerMs = timeNow - 1662463763338
+            document.getElementById("now").innerHTML = convertMsToTime(timerMs);
+        }
+
+        setInterval(refreshTimer, 1);
+    </script>
+</body>
+
+</html>

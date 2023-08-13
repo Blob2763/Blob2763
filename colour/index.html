@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>cool web game</title>
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+
+<body>
+    <h1>guess the colour maybe</h1>
+
+    <table>
+        <tr>
+            <td>
+                <div class="colour-display" id="colour-to-guess">
+                    <p id="colour"></p>
+                </div>
+            </td>
+
+            <td>
+                <div class="colour-display" id="colour-guess">
+                    <p id="guess">rgb(<span id="r-guess">0</span>, <span id="g-guess">0</span>, <span
+                            id="b-guess">0</span>)
+                    </p>
+
+                    <div id="inputs">
+                        R <input id="r-slider" type="range" min="0" max="255"> <br>
+                        G <input id="g-slider" type="range" min="0" max="255"> <br>
+                        B <input id="b-slider" type="range" min="0" max="255">
+                    </div>
+
+                    <button id="submit" onclick="submit()">SUBMIT</button>
+                    <button id="reset" onclick="reset()">TRY AGAIN</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <p id="score"></p>
+</body>
+
+</html>
