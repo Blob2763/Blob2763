@@ -1,0 +1,39 @@
+body {
+    background-color: #333232;
+    vertical-align: middle;
+    font-family: 'DM Mono', monospace;
+}
+
+.card {
+    background-color: #59343D;
+    border-radius: 10px;
+    vertical-align: middle;
+    width: 75%;
+    margin: auto;
+}
+
+p {
+    -webkit-text-fill-color: #FA3768;
+    font-size: 85px;
+    text-align: center;
+}
+
+#about {
+    -webkit-text-fill-color: #FA3768;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+a {
+    -webkit-text-fill-color: #FA3768;
+    font-size: 30px;
+    margin: 20px;
+}
+
+h6 {
+    -webkit-text-fill-color: #FA3768;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+}

@@ -1,14 +1,14 @@
 const projects = {
     "code": {
-        "link": "https://blob2763.github.io/code/",
+        "link": "/code",
         "img": "code.png",
     },
     "colour": {
-        "link": "https://blob2763.github.io/guess-the-colour/",
+        "link": "/colour",
         "img": "colour.png",
     },
     "stopwatch": {
-        "link": "https://blob2763.github.io/stopwatch-website/",
+        "link": "/stopwatch",
         "img": "stopwatch.png",
     },
     "the infinite lab": {
@@ -33,7 +33,7 @@ for (projectName in projects) {
     let button = document.createElement("a");
     button.className = "grid-item project"
     button.style = `
-    background-image: url(projects/${projectData["img"]}); 
+    background-image: url(imgs/projects/${projectData["img"]}); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
