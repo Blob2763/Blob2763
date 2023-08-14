@@ -1,5 +1,7 @@
 body {
-    background-color: #1e1e1e;
+    --backgrond: #1e1e1e;
+
+    background-color: var(--backgrond);
 
     color: #ffffff;
 
@@ -24,10 +26,44 @@ body {
     padding: 20px;
 }
 
+.item {
+    transition: 0.3s;
+}
+
+.item:hover {
+    border: 0.5vw solid var(--backgrond);
+    border-radius: 12px;
+}
+
+.item:active {
+    border: 0.8vw solid var(--backgrond);
+    border-radius: 16px;
+}
+
+.item.social:hover {
+    width: calc(3vw - 0.4vw);
+    height: calc(3vw - 0.4vw);
+}
+
+.item.project:hover {
+    width: calc(4vw - 0.4vw);
+    height: calc(4vw - 0.4vw);
+}
+
+.item.social:active {
+    width: calc(3vw - 1vw);
+    height: calc(3vw - 1vw);
+}
+
+.item.project:active {
+    width: calc(4vw - 1vw);
+    height: calc(4vw - 1vw);
+}
+
 .social {
     background-color: #4d4d4d;
 
-    border: 3px solid rgba(0, 0, 0, 0.073);
+    border: 0.3vw solid #00000013;
     border-radius: 8px;
 
     width: 3vw;
@@ -42,7 +78,7 @@ body {
 .project {
     background-color: #4d4d4d;
 
-    border: 3px solid rgba(0, 0, 0, 0.073);
+    border: 0.3vw solid rgba(0, 0, 0, 0.073);
     border-radius: 8px;
 
     width: 4vw;
