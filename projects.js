@@ -1,12 +1,4 @@
 const projects = {
-    "code": {
-        "link": "/code",
-        "img": "code.png",
-    },
-    "colour": {
-        "link": "/colour",
-        "img": "colour.png",
-    },
     "stopwatch": {
         "link": "/stopwatch",
         "img": "stopwatch.png",
@@ -15,13 +7,21 @@ const projects = {
         "link": "https://blob2763.github.io/infinite/",
         "img": "til.png",
     },
+    "noughts and crosses": {
+        "link": "https://blob2763.github.io/os-and-xs/",
+        "img": "os-and-xs.png",
+    },
+    "colour": {
+        "link": "/colour",
+        "img": "colour.png",
+    },
     "utils": {
         "link": "https://utils.is-a.dev/",
         "img": "utils.png",
     },
-    "noughts and crosses": {
-        "link": "https://blob2763.github.io/os-and-xs/",
-        "img": "os-and-xs.png",
+    "code": {
+        "link": "/code",
+        "img": "code.png",
     },
 };
 
@@ -31,7 +31,7 @@ for (projectName in projects) {
     console.log(projectData);
 
     let button = document.createElement("a");
-    button.className = "grid-item project"
+    button.className = "grid-item project item"
     button.style = `
     background-image: url(imgs/projects/${projectData["img"]}); 
     background-size: cover;

@@ -39,7 +39,7 @@ for (site in socials) {
     console.log(siteData);
 
     let button = document.createElement("a");
-    button.className = "grid-item social"
+    button.className = "grid-item social item"
     button.style = `
     background-image: url(imgs/socials/${siteData["img"]}); 
     background-size: 100% 100%;
