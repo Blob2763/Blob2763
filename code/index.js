@@ -1,8 +1,8 @@
 const data = {
-    "CSS": 2552,
-    "HTML": 3328,
-    "JavaScript": 4462,
-    "Python": 4144,
+    "CSS": 2868,
+    "HTML": 4446,
+    "JavaScript": 8110,
+    "Python": 4526,
 }
 
 let totalLines = 0;
