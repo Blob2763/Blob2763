@@ -23,6 +23,10 @@ const projects = {
         "link": "/code",
         "img": "code.png",
     },
+    "blocks": {
+        "link": "/blocks",
+        "img": "blocks.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");
