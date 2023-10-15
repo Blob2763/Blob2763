@@ -1,5 +1,5 @@
 async function blockCounts() {
-    return fetch('/blockCount.json')
+    return fetch('/blocks/blockCount.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -10,35 +10,8 @@ async function blockCounts() {
             throw new Error('Error: ' + error); // Concatenate error message
         });
 }
-
-async function varCounts() {
-    return fetch('/varCount.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .catch(error => {
-            throw new Error('Error: ' + error); // Concatenate error message
-        });
-}
-
-async function listCounts() {
-    return fetch('/listCount.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .catch(error => {
-            throw new Error('Error: ' + error); // Concatenate error message
-        });
-}
-
-const projectsSearched = 122345;
-const projectsFound = 5671;
+const projectsSearched = 500000;
+const projectsFound = 20000;
 
 document.getElementById('projects-searched').innerText = projectsSearched
 document.getElementById('projects-shared').innerText = projectsFound
@@ -143,79 +116,3 @@ blockCounts()
     .catch(error => {
         console.error(error.message); // Access the error message using error.message
     });
-
-varCounts()
-    .then(data => {
-        const jsonData = data
-
-        let dataList = [];
-        for (let category in jsonData) {
-            const categoryData = jsonData[category];
-            const categoryEntries = Object.entries(categoryData);
-
-            dataList = dataList.concat(categoryEntries);
-        }
-        dataList.sort((a, b) => b[1] - a[1])
-        console.log(dataList);
-
-        let totalVarCount = 0
-        for (const item of dataList) {
-            totalVarCount += item[1];
-        }
-        document.getElementById('vars-counted').innerText = totalVarCount
-
-        let topTenList = document.getElementById('top-vars-list');
-        const highestPercentage = (dataList[0][1] / totalVarCount) * 100;
-        for (let i = 0; i < 10; i++) {
-            const variable = dataList[i];
-            const percentage = (variable[1] / totalVarCount) * 100;
-
-            let entry = document.createElement('li');
-            entry.innerText = `${variable[0]} - ${variable[1]} uses (${percentage.toPrecision(3)}%)`
-            entry.className = 'variable'
-            entry.style.width = `${percentage * (95 / highestPercentage)}%`
-
-            topTenList.appendChild(entry);
-        }
-    })
-    .catch(error => {
-        console.error(error.message); // Access the error message using error.message
-    });
-
-listCounts()
-    .then(data => {
-        const jsonData = data
-
-        let dataList = [];
-        for (let category in jsonData) {
-            const categoryData = jsonData[category];
-            const categoryEntries = Object.entries(categoryData);
-
-            dataList = dataList.concat(categoryEntries);
-        }
-        dataList.sort((a, b) => b[1] - a[1])
-        console.log(dataList);
-
-        let totalListCount = 0
-        for (const item of dataList) {
-            totalListCount += item[1];
-        }
-        document.getElementById('lists-counted').innerText = totalListCount
-
-        let topTenList = document.getElementById('top-lists-list');
-        const highestPercentage = (dataList[0][1] / totalListCount) * 100;
-        for (let i = 0; i < 10; i++) {
-            const list = dataList[i];
-            const percentage = (list[1] / totalListCount) * 100;
-
-            let entry = document.createElement('li');
-            entry.innerText = `${list[0]} - ${list[1]} uses (${percentage.toPrecision(3)}%)`
-            entry.className = 'list'
-            entry.style.width = `${percentage * (95 / highestPercentage)}%`
-            topTenList.appendChild(entry);
-        }
-    })
-    .catch(error => {
-        console.error(error.message); // Access the error message using error.message
-    });
-
