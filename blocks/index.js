@@ -1,5 +1,5 @@
 async function blockCounts() {
-    return fetch('/blockCount.json')
+    return fetch('/blocks/blockCount.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -12,7 +12,7 @@ async function blockCounts() {
 }
 
 async function varCounts() {
-    return fetch('/varCount.json')
+    return fetch('/blocks/varCount.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -25,7 +25,7 @@ async function varCounts() {
 }
 
 async function listCounts() {
-    return fetch('/listCount.json')
+    return fetch('/blocks/listCount.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
