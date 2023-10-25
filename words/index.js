@@ -68,7 +68,7 @@ async function testVocab(language) {
 
     let totalDifferences = 0;
 
-    let difficultyScale = 0.5;
+    let difficultyScale = 0.4;
     for (let i = 1; i <= testRepeats; i++) {
         let differences = 0;
         let points = 0;
