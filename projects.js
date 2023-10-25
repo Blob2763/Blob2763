@@ -11,7 +11,7 @@ const projects = {
         "link": "https://blob2763.github.io/os-and-xs/",
         "img": "os-and-xs.png",
     },
-    "colour": {
+    "colour game": {
         "link": "/colour",
         "img": "colour.png",
     },
@@ -19,13 +19,17 @@ const projects = {
         "link": "https://utils.is-a.dev/",
         "img": "utils.png",
     },
-    "code": {
+    "my code": {
         "link": "/code",
         "img": "code.png",
     },
-    "blocks": {
+    "scratch block counts": {
         "link": "/blocks",
         "img": "blocks.png",
+    },
+    "count words": {
+        "link": "/words",
+        "img": "words.png",
     },
 };
 
