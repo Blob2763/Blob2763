@@ -12,7 +12,7 @@ async function getWordList(language) {
 
 let wordList;
 
-const differenceRange = 500;
+const differenceRange = 750;
 
 function newWord(difficulty) {
     difficulty = Math.max(difficulty, 0)
@@ -132,7 +132,7 @@ async function testVocab(language) {
     const playAgain = document.createElement('a');
     playAgain.className = 'button'
     playAgain.id = 'again'
-    playAgain.href = `/`
+    playAgain.href = `/words`
     playAgain.innerText = 'Play again'
 
     document.getElementById('share').appendChild(twitterShare);
