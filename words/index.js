@@ -136,7 +136,7 @@ async function testVocab(language) {
     const playAgain = document.createElement('a');
     playAgain.className = 'button'
     playAgain.id = 'again'
-    playAgain.href = `/`
+    playAgain.href = `/words`
     playAgain.innerText = 'Play again'
 
     document.getElementById('share').appendChild(twitterShare);
