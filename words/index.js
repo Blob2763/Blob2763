@@ -12,7 +12,7 @@ async function getWordList(language) {
 
 let wordList;
 
-const differenceRange = 750;
+const differenceRange = 500;
 
 function newWord(difficulty) {
     difficulty = Math.max(difficulty, 0)
@@ -67,8 +67,9 @@ async function testVocab(language) {
     const maxDifficulty = wordList.length - 2
 
     let totalDifferences = 0;
+    let totalPoints = 0;
 
-    let difficultyScale = 0.4;
+    let difficultyScale = 0.5;
     for (let i = 1; i <= testRepeats; i++) {
         let differences = 0;
         let points = 0;
@@ -96,7 +97,7 @@ async function testVocab(language) {
 
             console.log(answer);
 
-            if (answer === 'yes') { points++; }
+            if (answer === 'yes') { points++; totalPoints++; }
             differences += difficultyDifference
             totalDifferences += difficultyDifference
         }
@@ -118,8 +119,11 @@ async function testVocab(language) {
     }
 
     const overallAverageDifference = totalDifferences / (testRepeats * wordRepeats);
+    const overallAveragePoints = totalPoints / (testRepeats * wordRepeats);
 
-    const wordsKnown = Math.round(maxDifficulty * difficultyScale);
+    console.log('AVERAGE POINTS', overallAveragePoints);
+
+    const wordsKnown = Math.round(maxDifficulty * difficultyScale * overallAveragePoints);
     document.getElementById('score').innerText = `You know around ${wordsKnown} words! (±${Math.abs(Math.round(overallAverageDifference)) + (differenceRange / 2)})`
 
     const twitterShare = document.createElement('a');
@@ -132,7 +136,7 @@ async function testVocab(language) {
     const playAgain = document.createElement('a');
     playAgain.className = 'button'
     playAgain.id = 'again'
-    playAgain.href = `/words`
+    playAgain.href = `/`
     playAgain.innerText = 'Play again'
 
     document.getElementById('share').appendChild(twitterShare);
