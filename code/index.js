@@ -12,7 +12,7 @@ for (let lines of Object.values(data)) {
 
 function showData(language) {
     document.getElementById("language").innerText = language
-    document.getElementById("line-count").innerText = `${data[language]}/${totalLines} lines (as of 5th Sep 2023)`
+    document.getElementById("line-count").innerText = `${data[language]}/${totalLines} lines (as of 28th Oct 2023)`
 }
 
 function hideData() {
