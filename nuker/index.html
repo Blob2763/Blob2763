@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nothing going on here</title>
+
+    <script src="index.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>image nuker</h1>
+
+    <input type="file" id="imageInput" accept="image/*">
+    <br>
+
+    <div id="settings">
+        <div class="setting">
+            <input type="range" min="0" max="100" value="10" id="contrast">
+            <label for="contrast">Contrast</label>
+        </div>
+
+        <div class="setting">
+            <input type="range" min="0" max="100" value="20" id="brightness">
+            <label for="brightness">Brightness</label>
+        </div>
+
+        <div class="setting">
+            <input type="range" min="0" max="1" step="0.01" value="0.2" id="scatter">
+            <label for="scatter">Scatter</label>
+        </div>
+
+        <div class="setting">
+            <input type="range" min="0" max="1" step="0.01" value="0.4" id="negative">
+            <label for="negative">Negative</label>
+        </div>
+
+        <div class="setting">
+            <input type="range" min="0" max="1" step="0.01" value="0.8" id="redness">
+            <label for="redness">Redness</label>
+        </div>
+    </div>
+    <br>
+
+    <img id="image" src="">
+    <canvas id="canvas"></canvas>
+    <br>
+
+    <button id="save">save</button>
+</body>
+
+</html>
