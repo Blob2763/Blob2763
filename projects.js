@@ -31,6 +31,10 @@ const projects = {
         "link": "/words",
         "img": "words.png",
     },
+    "make images explode": {
+        "link": "/nuker",
+        "img": "nuker.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");
