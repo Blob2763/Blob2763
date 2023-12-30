@@ -15,10 +15,10 @@ const socials = {
         "link": "https://scratch.mit.edu/users/codecodcodecod/",
         "img": "scratch.png",
     },
-    "postlit": {
-        "link": "https://www.postlit.dev/users/blob2763/",
-        "img": "postlit.png",
-    },
+//    "postlit": {
+//        "link": "https://www.postlit.dev/users/blob2763/",
+//        "img": "postlit.png",
+//    },
     "snap": {
         "link": "https://snap.berkeley.edu/user?username=blob_2763",
         "img": "snap.png",
