@@ -21,8 +21,11 @@ let ruleNumber = Math.floor(Math.random() * possibleRules + 1);
 generatePattern(ruleNumber);
 
 function generatePattern(ruleNumber) {
-    let rule = ruleNumber.toString(states).padStart(possibleNeighbourhoods, '0');
+    cellWidth = canvas.width / cellsPerRow;
+    cellsPerColumn = Math.ceil(canvas.height / cellWidth);
     
+    let rule = ruleNumber.toString(states).padStart(possibleNeighbourhoods, '0');
+
     // start row
     let currentRow = []
     for (let i = 0; i < cellsPerRow; i++) {
@@ -80,8 +83,6 @@ ruleInput.addEventListener('input', function () {
 const zoomInput = document.getElementById('zoom');
 zoomInput.addEventListener('input', function () {
     cellsPerRow = zoomInput.value;
-    cellWidth = canvas.width / cellsPerRow;
-    cellsPerColumn = Math.ceil(canvas.height / cellWidth);
 
     generatePattern(ruleNumber);
 });
