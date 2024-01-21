@@ -35,6 +35,10 @@ const projects = {
         "link": "/nuker",
         "img": "nuker.png",
     },
+    "code makes fun patterns": {
+        "link": "/cells",
+        "img": "cells.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");
