@@ -10,8 +10,9 @@ let cellsPerRow = 250;
 let cellWidth = canvas.width / cellsPerRow;
 let cellsPerColumn = Math.ceil(canvas.height / cellWidth);
 
-const colours = ['#ffffff', '#F7B39F', '#FC7753'];
 // const colours = ['#ffffff', '#000000'];
+const colours = ['#ffffff', '#F7B39F', '#FC7753'];
+
 const states = colours.length;
 const possibleNeighbourhoods = states ** 3;
 
