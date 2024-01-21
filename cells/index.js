@@ -16,13 +16,13 @@ const possibleNeighbourhoods = states ** 3;
 
 const possibleRules = states ** possibleNeighbourhoods - 1;
 
-const ruleNumber = Math.floor(Math.random() * possibleRules + 1);
+let ruleNumber = Math.floor(Math.random() * possibleRules + 1);
 
 generatePattern(ruleNumber);
 
 function generatePattern(ruleNumber) {
-    const rule = ruleNumber.toString(states).padStart(possibleNeighbourhoods, '0');
-
+    let rule = ruleNumber.toString(states).padStart(possibleNeighbourhoods, '0');
+    
     // start row
     let currentRow = []
     for (let i = 0; i < cellsPerRow; i++) {
