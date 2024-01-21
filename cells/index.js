@@ -11,7 +11,8 @@ let cellWidth = canvas.width / cellsPerRow;
 let cellsPerColumn = Math.ceil(canvas.height / cellWidth);
 
 const colours = ['#ffffff', '#F7B39F', '#FC7753'];
-const states = colours.length
+// const colours = ['#ffffff', '#000000'];
+const states = colours.length;
 const possibleNeighbourhoods = states ** 3;
 
 const possibleRules = states ** possibleNeighbourhoods - 1;
@@ -24,14 +25,14 @@ function generatePattern(ruleNumber) {
     cellWidth = canvas.width / cellsPerRow;
     cellsPerColumn = Math.ceil(canvas.height / cellWidth);
     
-    let rule = ruleNumber.toString(states).padStart(possibleNeighbourhoods, '0');
+    let rule = parseInt(ruleNumber).toString(states).padStart(possibleNeighbourhoods, '0');
 
     // start row
     let currentRow = []
     for (let i = 0; i < cellsPerRow; i++) {
         currentRow.push(0);
     }
-    currentRow[Math.floor(cellsPerRow / 2)] = 2
+    currentRow[Math.floor(cellsPerRow / 2)] = states - 1
 
     let y = 0
 
