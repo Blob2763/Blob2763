@@ -5,14 +5,14 @@ fetch('https://api.ipify.org?format=json')
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('https://api6.ipify.org?format=json')
+fetch('https://corsproxy.io/?https://api6.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
         document.getElementById('ipv6').innerText = data.ip;
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('https://ipapi.co/json/')
+fetch('https://corsproxy.io/?https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -28,7 +28,7 @@ fetch('https://ipapi.co/json/')
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    fetch(`https://ipapi.co/${ipToLocate}/json/`)
+    fetch(`https://corsproxy.io/?https://ipapi.co/${ipToLocate}/json/`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
