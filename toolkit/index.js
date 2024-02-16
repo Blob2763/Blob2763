@@ -28,7 +28,7 @@ fetch('https://api6.ipify.org?format=json')
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    if ipToLocate !== '' {
+    if (ipToLocate !== '') {
         fetch(`https://corsproxy.io/?http://ip-api.com/json/${ipToLocate}`)
             .then(response => response.json())
             .then(data => {
