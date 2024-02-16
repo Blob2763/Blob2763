@@ -2,6 +2,18 @@ fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
         document.getElementById('ipv4').innerText = data.ip;
+
+        fetch(`https://corsproxy.io/?http://ip-api.com/json/${data.ip}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('country').innerText = data.country;
+                document.getElementById('region').innerText = data.regionName;
+                document.getElementById('city').innerText = data.city;
+                document.getElementById('coords').innerText = `${data.lat}, ${data.lon}`;
+                document.getElementById('postcode').innerText = data.zip;
+            })
+            .catch(error => console.error('Error fetching location:', error));
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
@@ -12,23 +24,11 @@ fetch('https://api6.ipify.org?format=json')
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('https://corsproxy.io/?http://ip-api.com/json/')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        document.getElementById('country').innerText = data.country;
-        document.getElementById('region').innerText = data.regionName;
-        document.getElementById('city').innerText = data.city;
-        document.getElementById('coords').innerText = `${data.lat}, ${data.lon}`;
-        document.getElementById('postcode').innerText = data.zip;
-    })
-    .catch(error => console.error('Error fetching location:', error));
-
 
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    fetch(`https://corsproxy.io/?http://ip-api.com/json/${ipToLocate}/`)
+    fetch(`https://corsproxy.io/?http://ip-api.com/json/${ipToLocate}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
