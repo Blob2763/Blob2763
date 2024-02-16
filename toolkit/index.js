@@ -12,7 +12,7 @@ fetch('https://api6.ipify.org?format=json')
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('http://ip-api.com/json/')
+fetch('https://ip-api.com/json/')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -28,7 +28,7 @@ fetch('http://ip-api.com/json/')
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    fetch(`http://ip-api.com/json/${ipToLocate}/`)
+    fetch(`https://ip-api.com/json/${ipToLocate}/`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
