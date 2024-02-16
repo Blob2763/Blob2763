@@ -5,22 +5,22 @@ fetch('https://api.ipify.org?format=json')
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('https://corsproxy.io/?https://api6.ipify.org?format=json')
+fetch('https://api6.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
         document.getElementById('ipv6').innerText = data.ip;
     })
     .catch(error => console.error('Error fetching IP address:', error));
 
-fetch('https://corsproxy.io/?https://ipapi.co/json/')
+fetch('http://ip-api.com/json/')
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        document.getElementById('country').innerText = data.country_name;
-        document.getElementById('region').innerText = data.region;
+        document.getElementById('country').innerText = data.country;
+        document.getElementById('region').innerText = data.regionName;
         document.getElementById('city').innerText = data.city;
-        document.getElementById('coords').innerText = `${data.latitude}, ${data.longitude}`;
-        document.getElementById('postcode').innerText = data.postal;
+        document.getElementById('coords').innerText = `${data.lat}, ${data.lon}`;
+        document.getElementById('postcode').innerText = data.zip;
     })
     .catch(error => console.error('Error fetching location:', error));
 
@@ -28,15 +28,15 @@ fetch('https://corsproxy.io/?https://ipapi.co/json/')
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    fetch(`https://corsproxy.io/?https://ipapi.co/${ipToLocate}/json/`)
+    fetch(`http://ip-api.com/json/${ipToLocate}/`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            document.getElementById('geo-country').innerText = data.country_name;
-            document.getElementById('geo-region').innerText = data.region;
+            document.getElementById('geo-country').innerText = data.country;
+            document.getElementById('geo-region').innerText = data.regionName;
             document.getElementById('geo-city').innerText = data.city;
-            document.getElementById('geo-coords').innerText = `${data.latitude}, ${data.longitude}`;
-            document.getElementById('geo-postcode').innerText = data.postal;
+            document.getElementById('geo-coords').innerText = `${data.lat}, ${data.lon}`;
+            document.getElementById('geo-postcode').innerText = data.zip;
         })
         .catch(error => console.error('Error fetching location:', error));
 }
