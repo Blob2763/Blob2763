@@ -28,17 +28,19 @@ fetch('https://api6.ipify.org?format=json')
 function locateIP() {
     const ipToLocate = document.getElementById('geo-ip').value;
 
-    fetch(`https://corsproxy.io/?http://ip-api.com/json/${ipToLocate}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            document.getElementById('geo-country').innerText = data.country;
-            document.getElementById('geo-region').innerText = data.regionName;
-            document.getElementById('geo-city').innerText = data.city;
-            document.getElementById('geo-coords').innerText = `${data.lat}, ${data.lon}`;
-            document.getElementById('geo-postcode').innerText = data.zip;
-        })
-        .catch(error => console.error('Error fetching location:', error));
+    if ipToLocate !== '' {
+        fetch(`https://corsproxy.io/?http://ip-api.com/json/${ipToLocate}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('geo-country').innerText = data.country;
+                document.getElementById('geo-region').innerText = data.regionName;
+                document.getElementById('geo-city').innerText = data.city;
+                document.getElementById('geo-coords').innerText = `${data.lat}, ${data.lon}`;
+                document.getElementById('geo-postcode').innerText = data.zip;
+            })
+            .catch(error => console.error('Error fetching location:', error));
+    }
 }
 
 
