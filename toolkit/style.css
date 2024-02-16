@@ -1,0 +1,59 @@
+:root,
+input,
+button {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+
+    :root,
+    input,
+    button {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+body {
+    background-color: black;
+
+    margin: 0;
+
+    color: white;
+}
+
+hr {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    padding: 8px;
+
+    width: 100%;
+
+    text-align: left;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer,
+#footer a {
+    color: gray;
+}

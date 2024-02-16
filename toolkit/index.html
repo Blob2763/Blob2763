@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="/index.js" defer></script>
+
+    <link href="/style.css" rel="stylesheet">
+    <link href="/components.css" rel="stylesheet">
+    <link href="/sections.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 style="margin-bottom: 0;">The Internet Toolkit</h1>
+    <p style="text-align: center; margin-top: 0; margin-bottom: 21.44px;">Helping you stay safe on the Internet</p>
+    <div id="ips" class="card black">
+        <h2>IPs</h2>
+        <p>Your IP address is visible to every website you visit, and it can reveal lots of information about you.</p>
+        <hr>
+
+        <h2><i>Your IP Addresses</i></h2>
+        <table>
+            <tr><th>Type</th><th>Address</th></tr>
+            <tr><td>v4</td><td id="ipv4">-</td></tr>
+            <tr><td>v6</td><td id="ipv6">-</td></tr>
+        </table>
+
+        <h2><i>Location from your IP</i></h2>
+        <p>This is visible to every website you visit, use a VPN to hide your location.</p>
+        <table>
+            <tr><td>Coordinates</td><td id="coords">-</td></tr>
+            <tr><td>Country</td><td id="country">-</td></tr>
+            <tr><td>Region</td><td id="region">-</td></tr>
+            <tr><td>City</td><td id="city">-</td></tr>
+            <tr><td>Postcode</td><td id="postcode">-</td></tr>
+        </table>
+
+        <h2><i>Geolocator</i></h2>
+        <input id="geo-ip" type="text" placeholder="IPv4 address"><br>
+        <button onclick="locateIP()" id="geolocate-button">Show info</button>
+        <table>
+            <tr><td>Coordinates</td><td id="geo-coords">-</td></tr>
+            <tr><td>Country</td><td id="geo-country">-</td></tr>
+            <tr><td>Region</td><td id="geo-region">-</td></tr>
+            <tr><td>City</td><td id="geo-city">-</td></tr>
+            <tr><td>Postcode</td><td id="geo-postcode">-</td></tr>
+        </table>
+    </div>
+    <div id="discord" class="card white">
+        <h2>Discord</h2>
+        <p>Discord has plenty of things for developers, they can be pretty useful if you know what you're doing.</p>
+        <hr>
+
+        <h2><i>Snowflake info</i></h2>
+        <input id="snowflake" type="number" placeholder="Discord snowflake"><br>
+        <button onclick="showSnowflakeInformation()" id="snowflake-button">Show info</button>
+        <table>
+            <tr><td>Date</td><td id="date">-</td></tr>
+            <tr><td>Unix timestamp</td><td id="unix">-</td></tr>
+            <tr><td>Worker ID</td><td id="worker-id">-</td></tr>
+            <tr><td>Process ID</td><td id="process-id">-</td></tr>
+            <tr><td>Increment</td><td id="increment">-</td></tr>
+        </table>
+
+        <h2><i>Webhook invalidator</i></h2>
+        <p>Warning: This tool should only be used if you find a scam webhook. You should always keep your webhook URLs hidden.</p>
+        <input id="webhook" type="text" placeholder="Webhook URL"><br>
+        <button onclick="deleteWebhook()" id="delete-webhook">Delete webhook</button>
+        <p id="result"></p>
+
+        <h2><i>Webhook sender</i></h2>
+        <input id="webhook-send" type="text" placeholder="Webhook URL"><br>
+        <input id="webhook-message" type="text" placeholder="Message"><br>
+        <button onclick="sendWebhook()" id="send-webhook">Send message</button>
+        <p id="result-send"></p>
+    </div>
+    <div id="requests" class="card black">
+        <h2>Requests</h2>
+        <p>The Fetch API can send requests for fetching resources across the Internet.</p>
+        <hr>
+
+        <h2><i>Fetch</i></h2>
+        <input id="path" type="text" placeholder="Path or URL"><br>
+        <button onclick="fetchData()" id="fetch-button">Fetch data</button>
+        <label class="checkbox-container">Allow CORS Proxy
+            <input id="cors" type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+        <table>
+            <tr><td>Status</td><td id="status">-</td></tr>
+            <tr><td>Body</td><td><pre id="body"></pre></td></tr>
+        </table>
+    </div>
+    <p id="footer">Made with 💛 by <a href="https://blob2763.is-a.dev">blob2763</a></p>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+#ips { background-color: #ffd200; }
+#discord { background-color: #5865f2; }
+#requests { background-color: #77dd86; }
+
+.black { color: black; }
+.white { color:white; }
+.black hr { border-top: thin solid black; }
+.white hr { border-top: thin solid white; }
+.black input { color: black; }
+.white input { color: white; }
+.black button { color: black; }
+.white button { color: white; }
