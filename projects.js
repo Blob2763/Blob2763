@@ -39,6 +39,14 @@ const projects = {
         "link": "/cells",
         "img": "cells.png",
     },
+    "the internet toolkit": {
+        "link": "/toolkit",
+        "img": "toolkit.png",
+    },
+    "literally just glass": {
+        "link": "/glass",
+        "img": "glass.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");

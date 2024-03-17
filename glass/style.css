@@ -1,0 +1,40 @@
+body {
+    background-image: url("bg.png");
+}
+
+.glass {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+
+    border-top: 3px solid #5c5c5c69;
+    border-left: 3px solid #5c5c5c69;
+    border-bottom: 3px solid #4b4b4b69;
+    border-right: 3px solid #4b4b4b69;
+    border-radius: 20px;
+
+    background-color: #2a2a2a23;
+    backdrop-filter: blur(25px);
+
+    top: calc(calc(-200px + 50vh) - 200px);
+
+    margin: 0;
+}
+
+#cursor {
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100px;
+
+    border-top: 3px solid #5c5c5c69;
+    border-left: 3px solid #5c5c5c69;
+    border-bottom: 3px solid #4b4b4b69;
+    border-right: 3px solid #4b4b4b69;
+
+    background-color: #aa71ff7b;
+    backdrop-filter: blur(10px);
+}
