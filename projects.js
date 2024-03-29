@@ -47,6 +47,10 @@ const projects = {
         "link": "/glass",
         "img": "glass.png",
     },
+    "dont use these passwords": {
+        "link": "/passwords",
+        "img": "passwords.png",
+    },
 };
 
 const projectsList = document.getElementById("projects");

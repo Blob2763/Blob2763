@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>another (less well known) password game</title>
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="index.js" defer></script>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1 style="margin-bottom: 0;">The <span id="bad">Bad</span> Password Game</h1>
+    <p style="text-align: center; margin-top: 0; margin-bottom: 0;">Which of these from the 10000 most common passwords is used more?</p>
+    <p style="text-align: center; margin-top: 8px; margin-bottom: 21.44px; color: grey;">By blob2763</p>
+    <div id="game">
+        <span id="score">0</span>
+        <div id="option1" class="option">
+            <span id="password1" class="password"></span>
+            <span id="rank1" class="rank"></span>
+            <hr>
+        </div>
+        <div id="option2" class="option">
+            <span id="password2" class="password"></span>
+            <span id="rank2" class="rank"></span>
+            <hr>
+        </div>
+
+        <p id="disclaimer">⚠ Disclaimer: I have attempted to filter out offensive passwords, however some may still be shown as the filter isn't 100% accurate.</p>
+    </div>
+</body>
+</html>
