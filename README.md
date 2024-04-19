@@ -1,4 +1,5 @@
 # blob2763
+![my stats](https://github-readme-stats.vercel.app/api?username=Blob2763)]
 hey! this is my profile, here are some fun things to do here
 
 ## visit my website
