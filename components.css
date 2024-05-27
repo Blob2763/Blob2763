@@ -1,0 +1,47 @@
+.follow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.follow-button {
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+}
+
+#repos {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#repos li {
+    background: url('img/repo.png') no-repeat left center;
+    background-size: 14.2px 18.4px;
+
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#repos li a {
+    text-decoration: none;
+
+    color: black;
+}
+
+#repos li a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #616161;
+}
