@@ -57,7 +57,7 @@
     background-color: #f7f7f7;
 }
 
-#gh-logo {
+#github .img-container {
     background-color: black;
 }
 
@@ -72,7 +72,7 @@
     background-color: #ffebeb;
 }
 
-#yt-logo {
+#youtube .img-container {
     background-color: white;
 }
 
@@ -87,7 +87,7 @@
     background-color: #fff3df;
 }
 
-#scratch-logo {
+#scratch .img-container {
     background-color: white;
 }
 
@@ -155,7 +155,7 @@
     background-color: #d9dbf6;
 }
 
-#discord-logo {
+#discord .img-container {
     background-color: #5865F2;
 }
 
@@ -170,7 +170,7 @@
     background-color: #d2f6ba;
 }
 
-#duolingo-logo {
+#duolingo .img-container {
     background-color: #50C800;
 }
 
@@ -179,14 +179,19 @@
     color: white;
 }
 
-#another {
+#chess {
     grid-area: 4 / 2 / 6 / 4;
     
-    background-color: #f7f7f7;
+    background-color: #deedd9;
 }
 
-#another-logo {
+#chess .img-container {
     background-color: white;
+}
+
+#chess .follow-button {
+    background-color: #5D9948;
+    color: white;
 }
 
 #utils {
@@ -195,11 +200,26 @@
     background-color: #d6f3e2;
 }
 
-#utils-logo {
+#utils .img-container {
     background-color: black;
 }
 
 #utils .follow-button {
+    background-color: #23CE6B;
+    color: white;
+}
+
+#another {
+    grid-area: 6 / 2 / 7 / 6;
+
+    background-color: white;
+}
+
+#another .img-container {
+    background-color: white;
+}
+
+#another .follow-button {
     background-color: #23CE6B;
     color: white;
 }
