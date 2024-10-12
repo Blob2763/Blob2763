@@ -15,4 +15,4 @@ it's called easydebugger and it has tons of useful tools to help with debugging 
 [code and docs](https://github.com/Blob2763/easydebugger)
 
 ## achieve more with utils
-[utils](https://utils.is-a.dev) is a website made by [me](https://github.com/Blob2763) and [cally](https://github.com/callumjt). it has tools for conversions, rng, and discord timestamps
+[utils](https://utils.is-a.dev) is a website made by [me](https://github.com/Blob2763) and [cally](https://github.com/cally-jt). it has tools for conversions, rng, and discord timestamps
