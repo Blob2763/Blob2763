@@ -1,11 +1,11 @@
 const data = {
-    'CSS': 4348,
-    'HTML': 3741,
-    'JavaScript': 11344,
-    'Python': 6529,
+    'CSS': 10440,
+    'HTML': 8459,
+    'JavaScript': 17640,
+    'Python': 15637,
 };
 
-const date = '17th Mar 2024';
+const date = '1st Dec 2024';
 
 let totalLines = 0;
 for (let lines of Object.values(data)) {
