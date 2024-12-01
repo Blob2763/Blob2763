@@ -209,8 +209,27 @@
     color: white;
 }
 
-#another {
+#code {
     grid-area: 6 / 2 / 7 / 6;
+
+    background-color: #282a3a;
+
+    color: white;
+}
+
+#code .img-container {
+    background-color: #444656;
+    border-color: #565864;
+}
+
+#code .follow-button {
+    background-color: #444656;
+    border-color: #565864;
+    color: white;
+}
+
+#another {
+    grid-area: 7 / 2 / 8 / 6;
 
     background-color: white;
 }
