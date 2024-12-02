@@ -13,7 +13,7 @@ let badWords = null;
 
 async function fetchBadWords() {
     if (badWords === null) {
-        const response = await fetch('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Miscellaneous/list-of-swear-words/en.txt');
+        const response = await fetch('https://raw.githubusercontent.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/refs/heads/master/en');
         badWords = await response.text();
     }
 
@@ -24,26 +24,28 @@ async function fetchBadWords() {
 const badIdx = [];
 
 async function containsBadWord(word) {
-    let result = false;
-
     try {
         const text = await fetchBadWords();
-        const badWordsList = text.split('\n');
+        const badWordsList = text
+            .split('\n')
+            .map(badWord => badWord.trim()) // Remove extra whitespace
+            .filter(badWord => badWord !== ''); // Filter out empty strings
 
-        badWordsList.forEach(badWord => {
-            if (word.includes(badWord)) {
-                result = true;
-                return;
+        for (const badWord of badWordsList) {
+            if (word.toLowerCase().includes(badWord.toLowerCase())) { // Case-insensitive substring match
+                return true;
             }
-        });
+        }
     } catch (error) {
         console.error('Error fetching bad words:', error);
     }
 
-    return result;
+    return false; // Return false if no matches are found
 }
 
-async function fetchRandomPassword(except = '') {
+async function fetchRandomPassword(except = '', attempts = 20) {
+    if (attempts <= 0) throw new Error('Exceeded maximum attempts to find a password');
+    
     const text = await fetchPasswords();
     const passwordsList = text.split('\n');
 
@@ -55,10 +57,10 @@ async function fetchRandomPassword(except = '') {
     const isBadPass = badIdx.includes(password);
 
     if (isException || isBadWord || isBadPass) {
-        return fetchRandomPassword(except);
+        if (isBadWord) { console.log("BAD WORD FILTER ACTIVATED"); }
+        return fetchRandomPassword(except, attempts - 1);
     } else {
         console.log(password, passwordIdx);
-
         return { 'password': password, 'idx': passwordIdx };
     }
 }
